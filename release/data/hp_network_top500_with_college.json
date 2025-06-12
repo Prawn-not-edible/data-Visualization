@@ -1,0 +1,2931 @@
+{
+  "nodes": [
+    {
+      "id": "Aberforth D.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Abraxas M.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Albus D.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Alicia S.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Andromeda T.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Angelina J.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Arthur W.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Astoria G.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Augusta L.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Barty C. Jr.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Barty C. Sr.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Bellatrix L.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Bill W.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Blaise Z.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Cedric D.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Charlie W.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Cho C.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Colin C.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Cormac M.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Daphne G.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Dean T.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Dennis C.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Dolores U.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Draco M.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Dudley D.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Ernie M.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Fenrir G.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Fleur D.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Fred W.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Gellert G.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "George W.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Ginny W.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Gregory G.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Hannah A.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Harry P.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Hermione G.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Horace S.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "James P.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Justin F.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Katie B.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Kingsley S.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Lavender B.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Lee J.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Lily Evans P.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Lily Luna P.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Lorcan S.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Lucius M.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Luna L.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Lysander S.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Marcus F.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Marlene M.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Minerva M.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Molly W.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "N. Tonks",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Narcissa M.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Neville L.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Oliver W.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Padma P.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Parvati P.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Percy W.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Petunia D.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Rabastan L.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Regulus B.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Remus L.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Rodolphus L.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Romilda V.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Ron W.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Rose W.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Rubeus H.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Salazar S.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Scorpius M.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Seamus F.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Severus S.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Sirius B.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Sorting Hat",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Susan B.",
+      "group": 1,
+      "college": "Hufflepuff"
+    },
+    {
+      "id": "Sybill T.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Teddy L.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Theodore N.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Tracey D.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Vernon D.",
+      "group": 1,
+      "college": "Ravenclaw"
+    },
+    {
+      "id": "Viktor K.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Vincent C.",
+      "group": 1,
+      "college": "Slytherin"
+    },
+    {
+      "id": "Walburga B.",
+      "group": 1,
+      "college": "Gryffindor"
+    },
+    {
+      "id": "Xenophilius L.",
+      "group": 1,
+      "college": "Ravenclaw"
+    }
+  ],
+  "links": [
+    {
+      "source": "Draco M.",
+      "target": "Hermione G.",
+      "value": 57099
+    },
+    {
+      "source": "Draco M.",
+      "target": "Harry P.",
+      "value": 50279
+    },
+    {
+      "source": "James P.",
+      "target": "Lily Evans P.",
+      "value": 31596
+    },
+    {
+      "source": "Harry P.",
+      "target": "Hermione G.",
+      "value": 29755
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Ron W.",
+      "value": 25882
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Harry P.",
+      "value": 21522
+    },
+    {
+      "source": "Remus L.",
+      "target": "Sirius B.",
+      "value": 18912
+    },
+    {
+      "source": "Harry P.",
+      "target": "Severus S.",
+      "value": 17427
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Severus S.",
+      "value": 16253
+    },
+    {
+      "source": "Draco M.",
+      "target": "Ginny W.",
+      "value": 11433
+    },
+    {
+      "source": "Harry P.",
+      "target": "Ron W.",
+      "value": 10190
+    },
+    {
+      "source": "Rose W.",
+      "target": "Scorpius M.",
+      "value": 8578
+    },
+    {
+      "source": "James P.",
+      "target": "Sirius B.",
+      "value": 8392
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Severus S.",
+      "value": 7179
+    },
+    {
+      "source": "N. Tonks",
+      "target": "Remus L.",
+      "value": 6376
+    },
+    {
+      "source": "Fred W.",
+      "target": "George W.",
+      "value": 5624
+    },
+    {
+      "source": "Harry P.",
+      "target": "Sirius B.",
+      "value": 4898
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Hermione G.",
+      "value": 4592
+    },
+    {
+      "source": "James P.",
+      "target": "Remus L.",
+      "value": 4145
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Sirius B.",
+      "value": 3920
+    },
+    {
+      "source": "Fred W.",
+      "target": "Hermione G.",
+      "value": 3753
+    },
+    {
+      "source": "Harry P.",
+      "target": "Luna L.",
+      "value": 3465
+    },
+    {
+      "source": "Draco M.",
+      "target": "Ron W.",
+      "value": 3423
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Sirius B.",
+      "value": 2881
+    },
+    {
+      "source": "Albus D.",
+      "target": "Minerva M.",
+      "value": 2792
+    },
+    {
+      "source": "Albus D.",
+      "target": "Harry P.",
+      "value": 2765
+    },
+    {
+      "source": "Harry P.",
+      "target": "Remus L.",
+      "value": 2483
+    },
+    {
+      "source": "Harry P.",
+      "target": "James P.",
+      "value": 2473
+    },
+    {
+      "source": "Harry P.",
+      "target": "Lily Evans P.",
+      "value": 2375
+    },
+    {
+      "source": "Lucius M.",
+      "target": "Narcissa M.",
+      "value": 2344
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Remus L.",
+      "value": 2314
+    },
+    {
+      "source": "Remus L.",
+      "target": "Severus S.",
+      "value": 2289
+    },
+    {
+      "source": "Albus D.",
+      "target": "Severus S.",
+      "value": 2219
+    },
+    {
+      "source": "Draco M.",
+      "target": "Severus S.",
+      "value": 2194
+    },
+    {
+      "source": "Draco M.",
+      "target": "Luna L.",
+      "value": 2152
+    },
+    {
+      "source": "Severus S.",
+      "target": "Sirius B.",
+      "value": 2148
+    },
+    {
+      "source": "Luna L.",
+      "target": "Neville L.",
+      "value": 2035
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Draco M.",
+      "value": 2018
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Remus L.",
+      "value": 1992
+    },
+    {
+      "source": "Regulus B.",
+      "target": "Sirius B.",
+      "value": 1958
+    },
+    {
+      "source": "George W.",
+      "target": "Hermione G.",
+      "value": 1921
+    },
+    {
+      "source": "Lily Luna P.",
+      "target": "Scorpius M.",
+      "value": 1913
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Draco M.",
+      "value": 1900
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Ron W.",
+      "value": 1820
+    },
+    {
+      "source": "Harry P.",
+      "target": "Neville L.",
+      "value": 1765
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Hermione G.",
+      "value": 1746
+    },
+    {
+      "source": "Draco M.",
+      "target": "Lucius M.",
+      "value": 1721
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Harry P.",
+      "value": 1645
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Luna L.",
+      "value": 1498
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Lucius M.",
+      "value": 1488
+    },
+    {
+      "source": "James P.",
+      "target": "Severus S.",
+      "value": 1485
+    },
+    {
+      "source": "Harry P.",
+      "target": "Lucius M.",
+      "value": 1480
+    },
+    {
+      "source": "Lucius M.",
+      "target": "Severus S.",
+      "value": 1468
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Minerva M.",
+      "value": 1412
+    },
+    {
+      "source": "Minerva M.",
+      "target": "Severus S.",
+      "value": 1360
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Luna L.",
+      "value": 1297
+    },
+    {
+      "source": "Draco M.",
+      "target": "Narcissa M.",
+      "value": 1233
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Narcissa M.",
+      "value": 1221
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Sirius B.",
+      "value": 1204
+    },
+    {
+      "source": "Marlene M.",
+      "target": "Sirius B.",
+      "value": 1173
+    },
+    {
+      "source": "Katie B.",
+      "target": "Oliver W.",
+      "value": 1060
+    },
+    {
+      "source": "Dudley D.",
+      "target": "Harry P.",
+      "value": 1040
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Neville L.",
+      "value": 1029
+    },
+    {
+      "source": "Draco M.",
+      "target": "Scorpius M.",
+      "value": 1026
+    },
+    {
+      "source": "Harry P.",
+      "target": "Teddy L.",
+      "value": 1017
+    },
+    {
+      "source": "Fleur D.",
+      "target": "Hermione G.",
+      "value": 1016
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Hermione G.",
+      "value": 1013
+    },
+    {
+      "source": "Harry P.",
+      "target": "N. Tonks",
+      "value": 995
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Rodolphus L.",
+      "value": 987
+    },
+    {
+      "source": "Fleur D.",
+      "target": "Harry P.",
+      "value": 966
+    },
+    {
+      "source": "George W.",
+      "target": "Harry P.",
+      "value": 937
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Harry P.",
+      "value": 936
+    },
+    {
+      "source": "Cedric D.",
+      "target": "Harry P.",
+      "value": 929
+    },
+    {
+      "source": "Arthur W.",
+      "target": "Molly W.",
+      "value": 919
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Theodore N.",
+      "value": 913
+    },
+    {
+      "source": "Harry P.",
+      "target": "Minerva M.",
+      "value": 913
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Viktor K.",
+      "value": 898
+    },
+    {
+      "source": "Angelina J.",
+      "target": "George W.",
+      "value": 892
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Hermione G.",
+      "value": 888
+    },
+    {
+      "source": "Draco M.",
+      "target": "Theodore N.",
+      "value": 883
+    },
+    {
+      "source": "Albus D.",
+      "target": "Gellert G.",
+      "value": 878
+    },
+    {
+      "source": "Fred W.",
+      "target": "Harry P.",
+      "value": 837
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Bellatrix L.",
+      "value": 823
+    },
+    {
+      "source": "Harry P.",
+      "target": "Petunia D.",
+      "value": 790
+    },
+    {
+      "source": "Dean T.",
+      "target": "Seamus F.",
+      "value": 763
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Petunia D.",
+      "value": 739
+    },
+    {
+      "source": "Lily Luna P.",
+      "target": "Teddy L.",
+      "value": 734
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Narcissa M.",
+      "value": 733
+    },
+    {
+      "source": "Draco M.",
+      "target": "Neville L.",
+      "value": 709
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Ginny W.",
+      "value": 689
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Harry P.",
+      "value": 688
+    },
+    {
+      "source": "James P.",
+      "target": "Lily Luna P.",
+      "value": 666
+    },
+    {
+      "source": "Oliver W.",
+      "target": "Percy W.",
+      "value": 634
+    },
+    {
+      "source": "Cedric D.",
+      "target": "Hermione G.",
+      "value": 621
+    },
+    {
+      "source": "Bill W.",
+      "target": "Fleur D.",
+      "value": 614
+    },
+    {
+      "source": "Ron W.",
+      "target": "Severus S.",
+      "value": 611
+    },
+    {
+      "source": "Luna L.",
+      "target": "Ron W.",
+      "value": 590
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Neville L.",
+      "value": 583
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Harry P.",
+      "value": 561
+    },
+    {
+      "source": "Harry P.",
+      "target": "Lily Luna P.",
+      "value": 561
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Narcissa M.",
+      "value": 559
+    },
+    {
+      "source": "Angelina J.",
+      "target": "Fred W.",
+      "value": 545
+    },
+    {
+      "source": "Cho C.",
+      "target": "Harry P.",
+      "value": 528
+    },
+    {
+      "source": "Hannah A.",
+      "target": "Neville L.",
+      "value": 517
+    },
+    {
+      "source": "Albus D.",
+      "target": "Hermione G.",
+      "value": 500
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Rose W.",
+      "value": 489
+    },
+    {
+      "source": "Harry P.",
+      "target": "Scorpius M.",
+      "value": 477
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Theodore N.",
+      "value": 458
+    },
+    {
+      "source": "Harry P.",
+      "target": "Theodore N.",
+      "value": 445
+    },
+    {
+      "source": "Draco M.",
+      "target": "Sirius B.",
+      "value": 443
+    },
+    {
+      "source": "George W.",
+      "target": "Ron W.",
+      "value": 436
+    },
+    {
+      "source": "Narcissa M.",
+      "target": "Severus S.",
+      "value": 435
+    },
+    {
+      "source": "Ron W.",
+      "target": "Rose W.",
+      "value": 426
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Severus S.",
+      "value": 425
+    },
+    {
+      "source": "Cedric D.",
+      "target": "Cho C.",
+      "value": 424
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Severus S.",
+      "value": 424
+    },
+    {
+      "source": "Remus L.",
+      "target": "Teddy L.",
+      "value": 414
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Hermione G.",
+      "value": 413
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Marlene M.",
+      "value": 404
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Lucius M.",
+      "value": 398
+    },
+    {
+      "source": "Harry P.",
+      "target": "Narcissa M.",
+      "value": 397
+    },
+    {
+      "source": "Harry P.",
+      "target": "Susan B.",
+      "value": 390
+    },
+    {
+      "source": "Luna L.",
+      "target": "Theodore N.",
+      "value": 389
+    },
+    {
+      "source": "Bill W.",
+      "target": "Hermione G.",
+      "value": 388
+    },
+    {
+      "source": "Charlie W.",
+      "target": "N. Tonks",
+      "value": 386
+    },
+    {
+      "source": "N. Tonks",
+      "target": "Sirius B.",
+      "value": 382
+    },
+    {
+      "source": "Hermione G.",
+      "target": "James P.",
+      "value": 376
+    },
+    {
+      "source": "Harry P.",
+      "target": "Vernon D.",
+      "value": 376
+    },
+    {
+      "source": "Fred W.",
+      "target": "Ron W.",
+      "value": 371
+    },
+    {
+      "source": "Draco M.",
+      "target": "Fred W.",
+      "value": 368
+    },
+    {
+      "source": "Lily Luna P.",
+      "target": "Rose W.",
+      "value": 368
+    },
+    {
+      "source": "George W.",
+      "target": "Luna L.",
+      "value": 366
+    },
+    {
+      "source": "Neville L.",
+      "target": "Ron W.",
+      "value": 353
+    },
+    {
+      "source": "Harry P.",
+      "target": "Molly W.",
+      "value": 351
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Draco M.",
+      "value": 351
+    },
+    {
+      "source": "Luna L.",
+      "target": "Severus S.",
+      "value": 350
+    },
+    {
+      "source": "James P.",
+      "target": "Marlene M.",
+      "value": 348
+    },
+    {
+      "source": "Lavender B.",
+      "target": "Ron W.",
+      "value": 347
+    },
+    {
+      "source": "Marcus F.",
+      "target": "Oliver W.",
+      "value": 345
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Draco M.",
+      "value": 343
+    },
+    {
+      "source": "Draco M.",
+      "target": "George W.",
+      "value": 343
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Draco M.",
+      "value": 335
+    },
+    {
+      "source": "Petunia D.",
+      "target": "Vernon D.",
+      "value": 332
+    },
+    {
+      "source": "George W.",
+      "target": "Ginny W.",
+      "value": 326
+    },
+    {
+      "source": "Bill W.",
+      "target": "Charlie W.",
+      "value": 326
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Scorpius M.",
+      "value": 324
+    },
+    {
+      "source": "Neville L.",
+      "target": "Severus S.",
+      "value": 323
+    },
+    {
+      "source": "Albus D.",
+      "target": "Sirius B.",
+      "value": 319
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Luna L.",
+      "value": 311
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Sirius B.",
+      "value": 307
+    },
+    {
+      "source": "Harry P.",
+      "target": "Salazar S.",
+      "value": 303
+    },
+    {
+      "source": "James P.",
+      "target": "Regulus B.",
+      "value": 301
+    },
+    {
+      "source": "Regulus B.",
+      "target": "Severus S.",
+      "value": 301
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Lily Evans P.",
+      "value": 297
+    },
+    {
+      "source": "Draco M.",
+      "target": "Remus L.",
+      "value": 297
+    },
+    {
+      "source": "N. Tonks",
+      "target": "Severus S.",
+      "value": 293
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Lavender B.",
+      "value": 291
+    },
+    {
+      "source": "Albus D.",
+      "target": "Draco M.",
+      "value": 291
+    },
+    {
+      "source": "Fred W.",
+      "target": "Ginny W.",
+      "value": 291
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Oliver W.",
+      "value": 288
+    },
+    {
+      "source": "Albus D.",
+      "target": "Remus L.",
+      "value": 282
+    },
+    {
+      "source": "Lavender B.",
+      "target": "Parvati P.",
+      "value": 281
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Molly W.",
+      "value": 279
+    },
+    {
+      "source": "Barty C. Jr.",
+      "target": "Regulus B.",
+      "value": 278
+    },
+    {
+      "source": "Fenrir G.",
+      "target": "Harry P.",
+      "value": 277
+    },
+    {
+      "source": "Bill W.",
+      "target": "Harry P.",
+      "value": 275
+    },
+    {
+      "source": "Lavender B.",
+      "target": "Seamus F.",
+      "value": 268
+    },
+    {
+      "source": "Albus D.",
+      "target": "Lily Evans P.",
+      "value": 265
+    },
+    {
+      "source": "Sirius B.",
+      "target": "Walburga B.",
+      "value": 255
+    },
+    {
+      "source": "Dudley D.",
+      "target": "Petunia D.",
+      "value": 254
+    },
+    {
+      "source": "Narcissa M.",
+      "target": "Sirius B.",
+      "value": 254
+    },
+    {
+      "source": "Harry P.",
+      "target": "Viktor K.",
+      "value": 252
+    },
+    {
+      "source": "Harry P.",
+      "target": "Regulus B.",
+      "value": 249
+    },
+    {
+      "source": "Regulus B.",
+      "target": "Remus L.",
+      "value": 245
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "N. Tonks",
+      "value": 239
+    },
+    {
+      "source": "Petunia D.",
+      "target": "Severus S.",
+      "value": 236
+    },
+    {
+      "source": "Draco M.",
+      "target": "Rose W.",
+      "value": 236
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Sirius B.",
+      "value": 235
+    },
+    {
+      "source": "N. Tonks",
+      "target": "Teddy L.",
+      "value": 230
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Theodore N.",
+      "value": 229
+    },
+    {
+      "source": "Hermione G.",
+      "target": "N. Tonks",
+      "value": 227
+    },
+    {
+      "source": "Minerva M.",
+      "target": "Sirius B.",
+      "value": 226
+    },
+    {
+      "source": "Harry P.",
+      "target": "Rubeus H.",
+      "value": 221
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Teddy L.",
+      "value": 221
+    },
+    {
+      "source": "Harry P.",
+      "target": "Oliver W.",
+      "value": 220
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Harry P.",
+      "value": 219
+    },
+    {
+      "source": "Molly W.",
+      "target": "Ron W.",
+      "value": 219
+    },
+    {
+      "source": "Aberforth D.",
+      "target": "Albus D.",
+      "value": 218
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Daphne G.",
+      "value": 216
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Remus L.",
+      "value": 214
+    },
+    {
+      "source": "George W.",
+      "target": "Percy W.",
+      "value": 214
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Hermione G.",
+      "value": 213
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Lily Luna P.",
+      "value": 213
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Daphne G.",
+      "value": 210
+    },
+    {
+      "source": "Katie B.",
+      "target": "Marcus F.",
+      "value": 209
+    },
+    {
+      "source": "George W.",
+      "target": "Molly W.",
+      "value": 205
+    },
+    {
+      "source": "Lucius M.",
+      "target": "Sirius B.",
+      "value": 205
+    },
+    {
+      "source": "Harry P.",
+      "target": "Seamus F.",
+      "value": 204
+    },
+    {
+      "source": "Fred W.",
+      "target": "Katie B.",
+      "value": 203
+    },
+    {
+      "source": "Lorcan S.",
+      "target": "Lysander S.",
+      "value": 201
+    },
+    {
+      "source": "Dean T.",
+      "target": "Luna L.",
+      "value": 200
+    },
+    {
+      "source": "Fenrir G.",
+      "target": "Remus L.",
+      "value": 197
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Narcissa M.",
+      "value": 193
+    },
+    {
+      "source": "Fred W.",
+      "target": "Molly W.",
+      "value": 193
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Ron W.",
+      "value": 191
+    },
+    {
+      "source": "Albus D.",
+      "target": "Ron W.",
+      "value": 189
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Regulus B.",
+      "value": 188
+    },
+    {
+      "source": "Lily Luna P.",
+      "target": "Lysander S.",
+      "value": 187
+    },
+    {
+      "source": "Albus D.",
+      "target": "James P.",
+      "value": 187
+    },
+    {
+      "source": "Padma P.",
+      "target": "Parvati P.",
+      "value": 186
+    },
+    {
+      "source": "Lily Luna P.",
+      "target": "Severus S.",
+      "value": 183
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Regulus B.",
+      "value": 180
+    },
+    {
+      "source": "Alicia S.",
+      "target": "George W.",
+      "value": 178
+    },
+    {
+      "source": "Rabastan L.",
+      "target": "Rodolphus L.",
+      "value": 175
+    },
+    {
+      "source": "Colin C.",
+      "target": "Dennis C.",
+      "value": 174
+    },
+    {
+      "source": "Luna L.",
+      "target": "Xenophilius L.",
+      "value": 173
+    },
+    {
+      "source": "Dudley D.",
+      "target": "Vernon D.",
+      "value": 171
+    },
+    {
+      "source": "Fred W.",
+      "target": "Percy W.",
+      "value": 171
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Percy W.",
+      "value": 170
+    },
+    {
+      "source": "Dolores U.",
+      "target": "Harry P.",
+      "value": 170
+    },
+    {
+      "source": "Arthur W.",
+      "target": "Harry P.",
+      "value": 168
+    },
+    {
+      "source": "Lucius M.",
+      "target": "Remus L.",
+      "value": 166
+    },
+    {
+      "source": "Ron W.",
+      "target": "Sirius B.",
+      "value": 165
+    },
+    {
+      "source": "Minerva M.",
+      "target": "Remus L.",
+      "value": 165
+    },
+    {
+      "source": "Lily Luna P.",
+      "target": "Lorcan S.",
+      "value": 164
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Scorpius M.",
+      "value": 164
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "N. Tonks",
+      "value": 164
+    },
+    {
+      "source": "Fred W.",
+      "target": "Severus S.",
+      "value": 163
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Lucius M.",
+      "value": 162
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Seamus F.",
+      "value": 161
+    },
+    {
+      "source": "Dean T.",
+      "target": "Harry P.",
+      "value": 159
+    },
+    {
+      "source": "Harry P.",
+      "target": "Tracey D.",
+      "value": 158
+    },
+    {
+      "source": "George W.",
+      "target": "Severus S.",
+      "value": 158
+    },
+    {
+      "source": "Cho C.",
+      "target": "Hermione G.",
+      "value": 158
+    },
+    {
+      "source": "Rose W.",
+      "target": "Teddy L.",
+      "value": 157
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Harry P.",
+      "value": 157
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Teddy L.",
+      "value": 155
+    },
+    {
+      "source": "Harry P.",
+      "target": "Rose W.",
+      "value": 154
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Lily Evans P.",
+      "value": 150
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Regulus B.",
+      "value": 149
+    },
+    {
+      "source": "Fenrir G.",
+      "target": "Hermione G.",
+      "value": 149
+    },
+    {
+      "source": "Harry P.",
+      "target": "Kingsley S.",
+      "value": 148
+    },
+    {
+      "source": "Bill W.",
+      "target": "Ginny W.",
+      "value": 147
+    },
+    {
+      "source": "Gellert G.",
+      "target": "Harry P.",
+      "value": 146
+    },
+    {
+      "source": "Fred W.",
+      "target": "Luna L.",
+      "value": 146
+    },
+    {
+      "source": "Fred W.",
+      "target": "Sirius B.",
+      "value": 146
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Molly W.",
+      "value": 144
+    },
+    {
+      "source": "George W.",
+      "target": "Katie B.",
+      "value": 144
+    },
+    {
+      "source": "Ginny W.",
+      "target": "N. Tonks",
+      "value": 144
+    },
+    {
+      "source": "Draco M.",
+      "target": "Seamus F.",
+      "value": 143
+    },
+    {
+      "source": "George W.",
+      "target": "Lee J.",
+      "value": 140
+    },
+    {
+      "source": "Regulus B.",
+      "target": "Walburga B.",
+      "value": 139
+    },
+    {
+      "source": "Cedric D.",
+      "target": "Draco M.",
+      "value": 139
+    },
+    {
+      "source": "Harry P.",
+      "target": "Lavender B.",
+      "value": 139
+    },
+    {
+      "source": "Draco M.",
+      "target": "Teddy L.",
+      "value": 138
+    },
+    {
+      "source": "Dean T.",
+      "target": "Ginny W.",
+      "value": 136
+    },
+    {
+      "source": "Draco M.",
+      "target": "Minerva M.",
+      "value": 134
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Teddy L.",
+      "value": 133
+    },
+    {
+      "source": "Scorpius M.",
+      "target": "Teddy L.",
+      "value": 132
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Tracey D.",
+      "value": 131
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Rabastan L.",
+      "value": 130
+    },
+    {
+      "source": "Harry P.",
+      "target": "Percy W.",
+      "value": 129
+    },
+    {
+      "source": "Ginny W.",
+      "target": "James P.",
+      "value": 129
+    },
+    {
+      "source": "James P.",
+      "target": "Minerva M.",
+      "value": 129
+    },
+    {
+      "source": "Arthur W.",
+      "target": "Ginny W.",
+      "value": 128
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Marcus F.",
+      "value": 128
+    },
+    {
+      "source": "Gregory G.",
+      "target": "Vincent C.",
+      "value": 127
+    },
+    {
+      "source": "Colin C.",
+      "target": "Harry P.",
+      "value": 127
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Fleur D.",
+      "value": 126
+    },
+    {
+      "source": "Fleur D.",
+      "target": "N. Tonks",
+      "value": 126
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Susan B.",
+      "value": 126
+    },
+    {
+      "source": "Percy W.",
+      "target": "Ron W.",
+      "value": 125
+    },
+    {
+      "source": "Luna L.",
+      "target": "Remus L.",
+      "value": 123
+    },
+    {
+      "source": "Harry P.",
+      "target": "Parvati P.",
+      "value": 120
+    },
+    {
+      "source": "Dean T.",
+      "target": "Hermione G.",
+      "value": 119
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Remus L.",
+      "value": 119
+    },
+    {
+      "source": "Minerva M.",
+      "target": "Neville L.",
+      "value": 119
+    },
+    {
+      "source": "Narcissa M.",
+      "target": "Rodolphus L.",
+      "value": 118
+    },
+    {
+      "source": "Hannah A.",
+      "target": "Susan B.",
+      "value": 118
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Scorpius M.",
+      "value": 118
+    },
+    {
+      "source": "Bill W.",
+      "target": "Ron W.",
+      "value": 115
+    },
+    {
+      "source": "Cormac M.",
+      "target": "Hermione G.",
+      "value": 114
+    },
+    {
+      "source": "Cho C.",
+      "target": "Draco M.",
+      "value": 114
+    },
+    {
+      "source": "Ron W.",
+      "target": "Scorpius M.",
+      "value": 113
+    },
+    {
+      "source": "James P.",
+      "target": "Petunia D.",
+      "value": 112
+    },
+    {
+      "source": "Fred W.",
+      "target": "Lee J.",
+      "value": 111
+    },
+    {
+      "source": "James P.",
+      "target": "Narcissa M.",
+      "value": 111
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Lucius M.",
+      "value": 109
+    },
+    {
+      "source": "Fred W.",
+      "target": "Remus L.",
+      "value": 109
+    },
+    {
+      "source": "Remus L.",
+      "target": "Ron W.",
+      "value": 108
+    },
+    {
+      "source": "James P.",
+      "target": "Lucius M.",
+      "value": 108
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Ginny W.",
+      "value": 107
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Neville L.",
+      "value": 107
+    },
+    {
+      "source": "Harry P.",
+      "target": "Katie B.",
+      "value": 107
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Lily Evans P.",
+      "value": 105
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Ron W.",
+      "value": 105
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Susan B.",
+      "value": 104
+    },
+    {
+      "source": "Arthur W.",
+      "target": "Ron W.",
+      "value": 104
+    },
+    {
+      "source": "Ron W.",
+      "target": "Viktor K.",
+      "value": 104
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Lucius M.",
+      "value": 103
+    },
+    {
+      "source": "Minerva M.",
+      "target": "Ron W.",
+      "value": 101
+    },
+    {
+      "source": "Harry P.",
+      "target": "Padma P.",
+      "value": 101
+    },
+    {
+      "source": "Hannah A.",
+      "target": "Harry P.",
+      "value": 100
+    },
+    {
+      "source": "Narcissa M.",
+      "target": "Remus L.",
+      "value": 100
+    },
+    {
+      "source": "Colin C.",
+      "target": "Ginny W.",
+      "value": 99
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Remus L.",
+      "value": 99
+    },
+    {
+      "source": "Cedric D.",
+      "target": "Oliver W.",
+      "value": 99
+    },
+    {
+      "source": "Cho C.",
+      "target": "Ginny W.",
+      "value": 98
+    },
+    {
+      "source": "Harry P.",
+      "target": "Marcus F.",
+      "value": 98
+    },
+    {
+      "source": "Draco M.",
+      "target": "Lily Evans P.",
+      "value": 97
+    },
+    {
+      "source": "Cedric D.",
+      "target": "Fleur D.",
+      "value": 97
+    },
+    {
+      "source": "Fred W.",
+      "target": "Oliver W.",
+      "value": 96
+    },
+    {
+      "source": "Narcissa M.",
+      "target": "Regulus B.",
+      "value": 96
+    },
+    {
+      "source": "Abraxas M.",
+      "target": "Lucius M.",
+      "value": 95
+    },
+    {
+      "source": "Albus D.",
+      "target": "Rubeus H.",
+      "value": 95
+    },
+    {
+      "source": "Augusta L.",
+      "target": "Neville L.",
+      "value": 95
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Rabastan L.",
+      "value": 95
+    },
+    {
+      "source": "Neville L.",
+      "target": "Seamus F.",
+      "value": 95
+    },
+    {
+      "source": "Barty C. Jr.",
+      "target": "Hermione G.",
+      "value": 95
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Salazar S.",
+      "value": 94
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Luna L.",
+      "value": 94
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Kingsley S.",
+      "value": 93
+    },
+    {
+      "source": "Fleur D.",
+      "target": "Ginny W.",
+      "value": 93
+    },
+    {
+      "source": "Charlie W.",
+      "target": "George W.",
+      "value": 93
+    },
+    {
+      "source": "George W.",
+      "target": "Sirius B.",
+      "value": 93
+    },
+    {
+      "source": "Sirius B.",
+      "target": "Teddy L.",
+      "value": 91
+    },
+    {
+      "source": "Cho C.",
+      "target": "Luna L.",
+      "value": 91
+    },
+    {
+      "source": "Bill W.",
+      "target": "Percy W.",
+      "value": 90
+    },
+    {
+      "source": "Draco M.",
+      "target": "Viktor K.",
+      "value": 90
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Ginny W.",
+      "value": 89
+    },
+    {
+      "source": "Ron W.",
+      "target": "Seamus F.",
+      "value": 89
+    },
+    {
+      "source": "Luna L.",
+      "target": "Sirius B.",
+      "value": 89
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Fred W.",
+      "value": 87
+    },
+    {
+      "source": "Bill W.",
+      "target": "George W.",
+      "value": 87
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Minerva M.",
+      "value": 87
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Hermione G.",
+      "value": 86
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Seamus F.",
+      "value": 86
+    },
+    {
+      "source": "Cedric D.",
+      "target": "Viktor K.",
+      "value": 86
+    },
+    {
+      "source": "Ernie M.",
+      "target": "Hannah A.",
+      "value": 86
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Percy W.",
+      "value": 85
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Luna L.",
+      "value": 85
+    },
+    {
+      "source": "Alicia S.",
+      "target": "Katie B.",
+      "value": 84
+    },
+    {
+      "source": "Molly W.",
+      "target": "Percy W.",
+      "value": 83
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Molly W.",
+      "value": 83
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Parvati P.",
+      "value": 82
+    },
+    {
+      "source": "Draco M.",
+      "target": "Gregory G.",
+      "value": 81
+    },
+    {
+      "source": "Draco M.",
+      "target": "James P.",
+      "value": 81
+    },
+    {
+      "source": "Arthur W.",
+      "target": "Lucius M.",
+      "value": 80
+    },
+    {
+      "source": "George W.",
+      "target": "Remus L.",
+      "value": 80
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Parvati P.",
+      "value": 79
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Severus S.",
+      "value": 79
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Neville L.",
+      "value": 79
+    },
+    {
+      "source": "George W.",
+      "target": "Oliver W.",
+      "value": 78
+    },
+    {
+      "source": "Albus D.",
+      "target": "Luna L.",
+      "value": 78
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Minerva M.",
+      "value": 78
+    },
+    {
+      "source": "Minerva M.",
+      "target": "Rubeus H.",
+      "value": 77
+    },
+    {
+      "source": "Rubeus H.",
+      "target": "Severus S.",
+      "value": 77
+    },
+    {
+      "source": "Bill W.",
+      "target": "Molly W.",
+      "value": 77
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Blaise Z.",
+      "value": 76
+    },
+    {
+      "source": "Cedric D.",
+      "target": "Luna L.",
+      "value": 76
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Rodolphus L.",
+      "value": 76
+    },
+    {
+      "source": "Arthur W.",
+      "target": "Hermione G.",
+      "value": 76
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Ginny W.",
+      "value": 75
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Draco M.",
+      "value": 75
+    },
+    {
+      "source": "Barty C. Jr.",
+      "target": "Barty C. Sr.",
+      "value": 75
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Oliver W.",
+      "value": 75
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Ginny W.",
+      "value": 74
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Severus S.",
+      "value": 74
+    },
+    {
+      "source": "Dolores U.",
+      "target": "Minerva M.",
+      "value": 74
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Oliver W.",
+      "value": 74
+    },
+    {
+      "source": "Lucius M.",
+      "target": "Regulus B.",
+      "value": 73
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Percy W.",
+      "value": 73
+    },
+    {
+      "source": "Bill W.",
+      "target": "N. Tonks",
+      "value": 72
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Rabastan L.",
+      "value": 72
+    },
+    {
+      "source": "Aberforth D.",
+      "target": "Gellert G.",
+      "value": 71
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "James P.",
+      "value": 70
+    },
+    {
+      "source": "Albus D.",
+      "target": "Ginny W.",
+      "value": 70
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Neville L.",
+      "value": 70
+    },
+    {
+      "source": "Barty C. Jr.",
+      "target": "Bellatrix L.",
+      "value": 70
+    },
+    {
+      "source": "Bill W.",
+      "target": "Remus L.",
+      "value": 70
+    },
+    {
+      "source": "Dolores U.",
+      "target": "Severus S.",
+      "value": 69
+    },
+    {
+      "source": "Arthur W.",
+      "target": "Percy W.",
+      "value": 69
+    },
+    {
+      "source": "Luna L.",
+      "target": "Seamus F.",
+      "value": 69
+    },
+    {
+      "source": "Alicia S.",
+      "target": "Angelina J.",
+      "value": 68
+    },
+    {
+      "source": "Angelina J.",
+      "target": "Oliver W.",
+      "value": 68
+    },
+    {
+      "source": "Neville L.",
+      "target": "Theodore N.",
+      "value": 68
+    },
+    {
+      "source": "Draco M.",
+      "target": "Lavender B.",
+      "value": 68
+    },
+    {
+      "source": "Bill W.",
+      "target": "Draco M.",
+      "value": 68
+    },
+    {
+      "source": "Fleur D.",
+      "target": "Viktor K.",
+      "value": 67
+    },
+    {
+      "source": "Bill W.",
+      "target": "Fred W.",
+      "value": 67
+    },
+    {
+      "source": "Arthur W.",
+      "target": "George W.",
+      "value": 67
+    },
+    {
+      "source": "Lorcan S.",
+      "target": "Rose W.",
+      "value": 67
+    },
+    {
+      "source": "Fred W.",
+      "target": "Minerva M.",
+      "value": 66
+    },
+    {
+      "source": "Harry P.",
+      "target": "Sorting Hat",
+      "value": 66
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Luna L.",
+      "value": 65
+    },
+    {
+      "source": "Dudley D.",
+      "target": "Hermione G.",
+      "value": 64
+    },
+    {
+      "source": "Petunia D.",
+      "target": "Sirius B.",
+      "value": 64
+    },
+    {
+      "source": "Marlene M.",
+      "target": "Regulus B.",
+      "value": 63
+    },
+    {
+      "source": "Draco M.",
+      "target": "Lily Luna P.",
+      "value": 63
+    },
+    {
+      "source": "Ernie M.",
+      "target": "Justin F.",
+      "value": 63
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Katie B.",
+      "value": 63
+    },
+    {
+      "source": "Abraxas M.",
+      "target": "Hermione G.",
+      "value": 62
+    },
+    {
+      "source": "Draco M.",
+      "target": "Oliver W.",
+      "value": 62
+    },
+    {
+      "source": "Gregory G.",
+      "target": "Hermione G.",
+      "value": 62
+    },
+    {
+      "source": "Severus S.",
+      "target": "Sybill T.",
+      "value": 62
+    },
+    {
+      "source": "Lysander S.",
+      "target": "Rose W.",
+      "value": 62
+    },
+    {
+      "source": "Harry P.",
+      "target": "Harry P.",
+      "value": 62
+    },
+    {
+      "source": "Marlene M.",
+      "target": "Remus L.",
+      "value": 61
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Theodore N.",
+      "value": 61
+    },
+    {
+      "source": "Neville L.",
+      "target": "Sirius B.",
+      "value": 61
+    },
+    {
+      "source": "Angelina J.",
+      "target": "Katie B.",
+      "value": 61
+    },
+    {
+      "source": "Arthur W.",
+      "target": "Fred W.",
+      "value": 61
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Regulus B.",
+      "value": 61
+    },
+    {
+      "source": "Draco M.",
+      "target": "Vincent C.",
+      "value": 61
+    },
+    {
+      "source": "Dolores U.",
+      "target": "Hermione G.",
+      "value": 61
+    },
+    {
+      "source": "George W.",
+      "target": "Minerva M.",
+      "value": 60
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Scorpius M.",
+      "value": 60
+    },
+    {
+      "source": "Albus D.",
+      "target": "Lucius M.",
+      "value": 60
+    },
+    {
+      "source": "Barty C. Jr.",
+      "target": "Harry P.",
+      "value": 60
+    },
+    {
+      "source": "Neville L.",
+      "target": "Susan B.",
+      "value": 60
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Padma P.",
+      "value": 59
+    },
+    {
+      "source": "Hermione G.",
+      "target": "Rubeus H.",
+      "value": 59
+    },
+    {
+      "source": "Neville L.",
+      "target": "Remus L.",
+      "value": 59
+    },
+    {
+      "source": "Draco M.",
+      "target": "N. Tonks",
+      "value": 58
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Ron W.",
+      "value": 58
+    },
+    {
+      "source": "Draco M.",
+      "target": "Dudley D.",
+      "value": 58
+    },
+    {
+      "source": "Albus D.",
+      "target": "Bellatrix L.",
+      "value": 58
+    },
+    {
+      "source": "Blaise Z.",
+      "target": "Seamus F.",
+      "value": 58
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "N. Tonks",
+      "value": 58
+    },
+    {
+      "source": "Draco M.",
+      "target": "Hannah A.",
+      "value": 57
+    },
+    {
+      "source": "Lucius M.",
+      "target": "Scorpius M.",
+      "value": 57
+    },
+    {
+      "source": "Lysander S.",
+      "target": "Scorpius M.",
+      "value": 57
+    },
+    {
+      "source": "Lucius M.",
+      "target": "Rodolphus L.",
+      "value": 56
+    },
+    {
+      "source": "Daphne G.",
+      "target": "Ron W.",
+      "value": 56
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Minerva M.",
+      "value": 56
+    },
+    {
+      "source": "Molly W.",
+      "target": "N. Tonks",
+      "value": 56
+    },
+    {
+      "source": "Dean T.",
+      "target": "Draco M.",
+      "value": 56
+    },
+    {
+      "source": "Dudley D.",
+      "target": "Ginny W.",
+      "value": 56
+    },
+    {
+      "source": "Luna L.",
+      "target": "N. Tonks",
+      "value": 55
+    },
+    {
+      "source": "Kingsley S.",
+      "target": "N. Tonks",
+      "value": 55
+    },
+    {
+      "source": "Lorcan S.",
+      "target": "Scorpius M.",
+      "value": 55
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Molly W.",
+      "value": 55
+    },
+    {
+      "source": "Fleur D.",
+      "target": "Ron W.",
+      "value": 54
+    },
+    {
+      "source": "Minerva M.",
+      "target": "Molly W.",
+      "value": 54
+    },
+    {
+      "source": "Angelina J.",
+      "target": "Harry P.",
+      "value": 54
+    },
+    {
+      "source": "Molly W.",
+      "target": "Sirius B.",
+      "value": 53
+    },
+    {
+      "source": "Cedric D.",
+      "target": "Fred W.",
+      "value": 53
+    },
+    {
+      "source": "Molly W.",
+      "target": "Remus L.",
+      "value": 53
+    },
+    {
+      "source": "Cedric D.",
+      "target": "George W.",
+      "value": 53
+    },
+    {
+      "source": "Lucius M.",
+      "target": "Luna L.",
+      "value": 53
+    },
+    {
+      "source": "George W.",
+      "target": "Neville L.",
+      "value": 53
+    },
+    {
+      "source": "Draco M.",
+      "target": "Percy W.",
+      "value": 52
+    },
+    {
+      "source": "Fred W.",
+      "target": "Neville L.",
+      "value": 52
+    },
+    {
+      "source": "Bellatrix L.",
+      "target": "Molly W.",
+      "value": 52
+    },
+    {
+      "source": "Harry P.",
+      "target": "Rabastan L.",
+      "value": 51
+    },
+    {
+      "source": "Draco M.",
+      "target": "Marcus F.",
+      "value": 51
+    },
+    {
+      "source": "Fleur D.",
+      "target": "Luna L.",
+      "value": 51
+    },
+    {
+      "source": "Lily Luna P.",
+      "target": "Sirius B.",
+      "value": 51
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Theodore N.",
+      "value": 50
+    },
+    {
+      "source": "Harry P.",
+      "target": "Rodolphus L.",
+      "value": 50
+    },
+    {
+      "source": "Charlie W.",
+      "target": "Sirius B.",
+      "value": 50
+    },
+    {
+      "source": "Alicia S.",
+      "target": "Oliver W.",
+      "value": 50
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Lily Luna P.",
+      "value": 49
+    },
+    {
+      "source": "Ernie M.",
+      "target": "Susan B.",
+      "value": 49
+    },
+    {
+      "source": "Cedric D.",
+      "target": "Ginny W.",
+      "value": 49
+    },
+    {
+      "source": "Rubeus H.",
+      "target": "Sirius B.",
+      "value": 49
+    },
+    {
+      "source": "Molly W.",
+      "target": "Severus S.",
+      "value": 49
+    },
+    {
+      "source": "Dean T.",
+      "target": "Ron W.",
+      "value": 48
+    },
+    {
+      "source": "Lavender B.",
+      "target": "Padma P.",
+      "value": 48
+    },
+    {
+      "source": "Horace S.",
+      "target": "Lily Evans P.",
+      "value": 48
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Ron W.",
+      "value": 48
+    },
+    {
+      "source": "Albus D.",
+      "target": "Dolores U.",
+      "value": 48
+    },
+    {
+      "source": "Bill W.",
+      "target": "Severus S.",
+      "value": 48
+    },
+    {
+      "source": "Rabastan L.",
+      "target": "Regulus B.",
+      "value": 48
+    },
+    {
+      "source": "Lucius M.",
+      "target": "Ron W.",
+      "value": 48
+    },
+    {
+      "source": "Cho C.",
+      "target": "Dudley D.",
+      "value": 48
+    },
+    {
+      "source": "Lysander S.",
+      "target": "Molly W.",
+      "value": 48
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Narcissa M.",
+      "value": 47
+    },
+    {
+      "source": "Lavender B.",
+      "target": "Neville L.",
+      "value": 47
+    },
+    {
+      "source": "Astoria G.",
+      "target": "Lucius M.",
+      "value": 46
+    },
+    {
+      "source": "Draco M.",
+      "target": "Fleur D.",
+      "value": 46
+    },
+    {
+      "source": "Arthur W.",
+      "target": "Bill W.",
+      "value": 46
+    },
+    {
+      "source": "Justin F.",
+      "target": "Susan B.",
+      "value": 46
+    },
+    {
+      "source": "Horace S.",
+      "target": "Severus S.",
+      "value": 45
+    },
+    {
+      "source": "Albus D.",
+      "target": "Fred W.",
+      "value": 45
+    },
+    {
+      "source": "Angelina J.",
+      "target": "Hermione G.",
+      "value": 45
+    },
+    {
+      "source": "Albus D.",
+      "target": "Petunia D.",
+      "value": 45
+    },
+    {
+      "source": "Ginny W.",
+      "target": "Lavender B.",
+      "value": 45
+    },
+    {
+      "source": "Lavender B.",
+      "target": "Luna L.",
+      "value": 45
+    },
+    {
+      "source": "Hannah A.",
+      "target": "Hermione G.",
+      "value": 45
+    },
+    {
+      "source": "Harry P.",
+      "target": "Romilda V.",
+      "value": 45
+    },
+    {
+      "source": "Fred W.",
+      "target": "James P.",
+      "value": 45
+    },
+    {
+      "source": "Lily Evans P.",
+      "target": "Ron W.",
+      "value": 44
+    },
+    {
+      "source": "Dean T.",
+      "target": "Neville L.",
+      "value": 44
+    },
+    {
+      "source": "Draco M.",
+      "target": "Regulus B.",
+      "value": 44
+    },
+    {
+      "source": "Gellert G.",
+      "target": "Hermione G.",
+      "value": 44
+    },
+    {
+      "source": "Andromeda T.",
+      "target": "Rodolphus L.",
+      "value": 43
+    },
+    {
+      "source": "Kingsley S.",
+      "target": "Sirius B.",
+      "value": 43
+    },
+    {
+      "source": "Luna L.",
+      "target": "Padma P.",
+      "value": 43
+    },
+    {
+      "source": "Minerva M.",
+      "target": "Sybill T.",
+      "value": 42
+    }
+  ]
+}

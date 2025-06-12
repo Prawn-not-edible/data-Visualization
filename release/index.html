@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Buildings Visualization</title>
+    <script src="js/d3.v7.min.js"></script>
+    <style>
+        .tooltip {
+            position: absolute;
+            background: white;
+            border: 1px solid #333;
+            padding: 8px;
+            pointer-events: none;
+            font-family: Arial;
+            font-size: 12px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+        /* 原点标记 */
+        .origin-point {
+            filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+        }
+    </style>
+</head>
+<body>
+    <div class="tooltip"></div>
+
+    <script type="module">
+            // import * as d3 from "./js/d3.v7.min.js";
+
+            // 图尺寸
+            // const width = 1228;
+            // const height = 800;
+                        
+            const tooltip = d3.select("body")
+              .append("div")
+              .attr("class", "tooltip")
+              .style("opacity", 0);
+
+            const margin = { top: 50, right: 90, bottom: 40, left: 120 };
+            const width = 1228 - margin.left - margin.right;
+            const height = 900 - margin.top - margin.bottom;
+
+            // 颜色
+            const color = d3.scaleOrdinal(d3.schemeSet3);
+
+            // 加载数据
+            d3.json("data/hp_network_top500.json").then(data => {
+            // 拷贝数据，避免原始数据被d3 force修改
+                const links = data.links.map(d => ({...d}));
+                const nodes = data.nodes.map(d => ({...d}));
+
+
+
+                
+                // 1. 计算每个节点的度中心性
+                const degree = {};
+                links.forEach(link => {
+                    degree[link.source] = (degree[link.source] || 0) + 1;
+                    degree[link.target] = (degree[link.target] || 0) + 1;
+                });
+            
+                // 2. 找到度中心性最高的前20个节点
+                const top20 = new Set(
+                    Object.entries(degree)
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, 20)
+                        .map(([id]) => id)
+                );
+                console.log("Top 20 nodes by degree centrality:", top20);
+                // 计算top20并排序
+                const top20Arr = Object.entries(degree)
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, 20)
+                    .map(([id]) => id);
+
+                // 建立id到半径的映射
+                const minR = 5.5, maxR = 15;
+                const rScale = d3.scaleLinear()
+                    .domain([0, 19])
+                    .range([maxR, minR]);
+                const id2r = {};
+                top20Arr.forEach((id, i) => {
+                    id2r[id] = rScale(i);
+                });
+                
+                   
+
+                console.log(links)
+
+                // 创建力导向仿真
+                const simulation = d3.forceSimulation(nodes)
+                    // .force("link", d3.forceLink(links).id(d => d.id))
+                    .force("link", d3.forceLink(links).id(d => d.id).distance(140)) // 默认30，改大
+                    // .force("charge", d3.forceManyBody())
+                    .force("charge", d3.forceManyBody().strength(-70)) // 默认-30，改大
+                    .force("center", d3.forceCenter(width / 2, height / 2))
+                    .on("tick", ticked);
+
+                // 创建SVG
+                const svg = d3.select("body").append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .attr("viewBox", [0, 0, width, height])
+                    .attr("style", "max-width: 100%; height: auto;");
+
+                const maxValue = d3.max(links, d => d.value);
+                const gray = d3.scaleLinear()
+                    .domain([1, maxValue])
+                    .range(["#dddddd", "#222222"]);
+
+                // 绘制边
+                const link = svg.append("g")
+                    .attr("stroke", "#999")
+                    .attr("stroke-opacity", 0.4)
+                    .selectAll("line")
+                    .data(links)
+                    .join("line")
+                    // .attr("stroke-width", d => Math.sqrt(d.value))
+                    // .attr("stroke-width", d => Math.max(1, Math.floor(d.value / 1000)));
+                    .attr("stroke-width", d => Math.max(0.5, Math.floor(d.value / 5000)))
+                    .attr("stroke", d => gray(d.value))
+                    
+                    .attr("class", "link")
+                    .attr("data-source", d => d.source.id || d.source)
+                    .attr("data-target", d => d.target.id || d.target)
+                
+                // 绘制边时加 class
+                const link2 = svg.append("g")
+                    .selectAll("line")
+                    .data(links)
+                    .join("line")
+                    .attr("class", "link")
+                    .attr("data-source", d => d.source.id || d.source)
+                    .attr("data-target", d => d.target.id || d.target)
+                    .attr("stroke-width", d => Math.max(0.5, Math.floor(d.value / 4000)))
+                    .attr("stroke", d => gray(d.value));
+
+                const node = svg.append("g")
+                    .selectAll("g")
+                    .data(nodes)
+                    .join("g")
+                    .call(drag(simulation)) // 让整个g可拖拽
+                    .on("mouseover", (event, d) => {
+                        tooltip.transition()
+                            .duration(200)
+                            .style("opacity", .9);
+                        tooltip.html(d.id)
+                            .style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 20) + "px");
+                    })
+                    .on("mousemove", (event) => {
+                        tooltip.style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 20) + "px");
+                    })
+                    .on("mouseout", () => {
+                        tooltip.transition()
+                            .duration(200)
+                            .style("opacity", 0);
+                    });
+
+                // 先画圆，作为默认头像
+                node.append("circle")
+                    .attr("r", d => id2r[d.id] || 6)
+                    .attr("fill", d => color(d.group));
+
+                // 再画图片，加载失败时隐藏
+                node.append("image")
+                    .attr("xlink:href", d => `character/head_portrait/${d.id}.png`)
+                    .attr("width", d => (id2r[d.id] || 5) * 2.6)
+                    .attr("height", d => (id2r[d.id] || 5) * 2.6)
+                    .attr("x", d => -(id2r[d.id] || 5))
+                    .attr("y", d => -(id2r[d.id] || 5))
+                    // .on("error", function() { d3.select(this).style("display", "none"); });
+                    .on("error", function() {
+                        d3.select(this).style("display", "none");
+                        // 显示文字
+                        d3.select(this.parentNode).select("text").style("display", "");
+                    });
+
+                node.append("text")
+                    .text(d => d.id)
+                    .attr("y", d => (id2r[d.id] || 5) + 10)
+                    .attr("text-anchor", "middle")
+                    .attr("font-size", "9px")
+                    .attr("fill", "#333")
+                    .style("pointer-events", "none")
+                    // .style("display", "none");
+                
+
+                // 节点高亮相关边
+                node.on("mouseover", (event, d) => {
+                    tooltip.transition().duration(200).style("opacity", .9);
+                    tooltip.html(d.id)
+                        .style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 20) + "px");
+
+                    // 高亮相关边
+                    link.filter(l => l.source.id === d.id || l.target.id === d.id || l.source === d.id || l.target === d.id)
+                        .attr("stroke", "#ff9800")
+                        .attr("stroke-width", d => Math.max(2, Math.floor(d.value / 4000)))
+                        .attr("stroke-opacity", 0.9);
+                })
+                .on("mouseout", (event, d) => {
+                    tooltip.transition().duration(200).style("opacity", 0);
+
+                    // 恢复边样式
+                    link
+                        .attr("stroke", d => gray(d.value))
+                        .attr("stroke-width", d => Math.max(0.5, Math.floor(d.value / 4000)))
+                        .attr("stroke-opacity", 0.4);
+                });
+
+                // 拖拽行为
+                function drag(simulation) {
+                    function dragstarted(event) {
+                    if (!event.active) simulation.alphaTarget(0.3).restart();
+                    event.subject.fx = event.subject.x;
+                    event.subject.fy = event.subject.y;
+                    }
+                    function dragged(event) {
+                    event.subject.fx = event.x;
+                    event.subject.fy = event.y;
+                    }
+                    function dragended(event) {
+                    if (!event.active) simulation.alphaTarget(0);
+                    event.subject.fx = null;
+                    event.subject.fy = null;
+                    }
+                    return d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended);
+                }
+
+              
+                function ticked() {
+                    node.attr("transform", d => `translate(${d.x},${d.y})`);
+                    link
+                        .attr("x1", d => d.source.x)
+                        .attr("y1", d => d.source.y)
+                        .attr("x2", d => d.target.x)
+                        .attr("y2", d => d.target.y);
+                }
+            });
+    </script>
+    
+</body  >
+</html>

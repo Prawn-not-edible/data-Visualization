@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Buildings Visualization</title>
+    <script src="js/d3.v7.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700&display=swap&subset=vietnamese" rel="stylesheet">
+    <style>
+        .tooltip {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.97);
+            border: 1.2px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 12px 18px 12px 18px;
+            pointer-events: none;
+            /* font-family: 'Cormorant Garamond', Arial, sans-serif; */
+            font-size: 15px;
+            color: #273046;
+            box-shadow: 0 4px 24px rgba(39,48,70,0.10), 0 1.5px 8px rgba(39,48,70,0.06);
+            min-width: 120px;
+            line-height: 1.7;
+            transition: opacity 0.18s;
+            z-index: 10;
+        }
+
+        /* 原点标记 */
+        .origin-point {
+            filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+        }
+    </style>
+</head>
+<body>
+   
+
+        
+
+    <script type="module">
+    // import * as d3 from "./js/d3.v7.min.js";
+    
+        // 设置图表尺寸和边距
+        const margin = { top: 40, right: 30, bottom: 40, left: 50 };
+        const width = 800 - margin.left - margin.right;
+        const height = 900 - margin.top - margin.bottom;
+        
+        // 创建SVG容器
+        const svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+        
+        // 添加标题
+        svg.append("text")
+            .attr("x", width / 2)
+            .attr("y", -margin.top + 30)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .style("font-weight", "bold")
+
+
+        svg.append("defs").html(`
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+            </filter>
+        `);
+        
+        // 黄金螺旋参数
+        const a = 15; // 初始半径
+        const b = 0.306349; // ln(phi)/pi, phi=黄金比例
+        const centerX = width / 2;
+        const centerY = height / 2;
+
+
+        // .domain(d3.extent(data, d => d.hot_sum).reverse());
+
+        // const color = d3.scaleSequential(d3.interpolateRdYlBu)
+            // .domain(d3.extent(data, d => d.hot_sum).reverse());
+
+        // 读取数据
+        d3.csv("data/2.csv").then(data => {
+            // 转换数据类型
+            data.forEach(d => {
+                d.count = +d.count;
+                d.hot_sum = +d.hot_sum;
+                d.Year = d.Year || d.year || d.YEAR; // 兼容不同表头
+            });
+        
+            // 计算颜色域
+            // color.domain(d3.extent(data, d => d.hot_sum));
+             // 颜色比例尺
+            // const color = d3.scaleSequential(d3.interpolateYlOrRd);
+            const minHot = d3.min(data, d => d.hot_sum);
+            const maxHot = d3.max(data, d => d.hot_sum);
+
+            const color = d3.scaleSequential(d3.interpolateRdYlBu).domain(d3.extent(data, d => d.hot_sum)); // 反转，高值红色
+
+            color.domain(d3.extent(data, d => d.hot_sum).reverse());
+
+        
+            // 计算最大count用于缩放圆半径
+            const maxCount = d3.max(data, d => d.count);
+            const rScale = d3.scalePow().exponent(2)
+            .domain([0, maxCount])
+            .range([12, 50]);
+
+        
+            // // 黄金螺旋折点
+            // const n = data.length;
+            // const thetaStep = 2 * Math.PI / (n + 1); // 均匀分布
+            // const points = data.map((d, i) => {
+            //     const theta = i * thetaStep * 2.1; // 2.5可调节螺旋松紧
+            //     // const r = a * Math.exp(b * theta);
+            //     let r = a * Math.exp(b * theta);
+            //     if (+d.Year < 2012) {
+            //         r = r * 1.2; // 2015年之后的点更靠近中心
+            //     } 
+            //     if (+d.Year > 2015) {
+            //         r = r * 0.9; // 2015年之后的点更靠近中心
+            //     } 
+            //     if (+d.Year >=2018) {
+            //         r = r * 0.88; // 2010年之前的点更远离中心
+            //     }   
+            //     console.log('r',+d.Year, r);
+
+            //     return {
+            //         x: centerX + r * Math.cos(theta),
+            //         y: centerY + r * Math.sin(theta),
+            //         d: d
+            //     };
+            // });
+
+            // ===== 黄金螺旋参数 =====
+            const a = 15;
+            const b = 0.3;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const n = data.length;
+            const spiralSegments = 2000; // 越大越平滑
+            const theta_max = 1.65 * Math.PI * 2;   // 总圈数，自行调节
+            // 分布控制：<1 内稀外密，=1 均匀，>1 外稀内密
+            function customDistrib(f) { return Math.pow(f, 0.62); }
+
+            // ===== 1. 高密度采样标准黄金螺旋轨迹 spiralSamples & 弧长 spiralArcLength =====
+            const spiralSamples = [];
+            const spiralArcLength = [0];
+            let totalLength = 0;
+            let prev = null;
+            for (let i = 0; i < spiralSegments; i++) {
+                const t = i / (spiralSegments - 1);
+                const theta = theta_max * t;
+                const r = a * Math.exp(b * theta);
+                const x = centerX + r * Math.cos(theta);
+                const y = centerY + r * Math.sin(theta);
+                if (prev) totalLength += Math.hypot(x - prev.x, y - prev.y);
+                spiralSamples.push({theta, r, t, x, y});
+                spiralArcLength.push(totalLength);
+                prev = {x, y};
+            }
+
+            // ===== 2. 螺旋曲线只用 spiralSamples 画，保证100%标准 =====
+            svg.append("path")
+                .datum(spiralSamples)
+                .attr("fill", "none")
+                .attr("stroke", "#aaa")
+                .attr("stroke-width", 2)
+                .attr("d", d3.line()
+                    .x(d => d.x)
+                    .y(d => d.y)
+                    .curve(d3.curveCardinal)
+                );
+            
+
+            // ===== 3. 圆点分布从 spiralSamples 取点，保证圆心严格在线上 =====
+            const points = [];
+            for (let i = 0; i < n; i++) {
+                const f = i / (n - 1);
+                const targetLen = totalLength * customDistrib(f); // 非均匀分布目标弧长
+                // 二分查找 spiralArcLength 中最近的索引
+                let low = 0, high = spiralArcLength.length - 1;
+                while (low < high) {
+                    let mid = Math.floor((low + high) / 2);
+                    if (spiralArcLength[mid] < targetLen) low = mid + 1;
+                    else high = mid;
+                }
+                const idx = Math.min(low, spiralSamples.length - 1);
+                const s = spiralSamples[idx];
+
+                // ===== 年份微调: 重新根据采样点theta计算新r，x, y =====
+                let r = s.r;
+                let x=s.x;
+                let y=s.y;
+                const d = data[i];
+                // if (+d.Year < 2012) r = r * 1.2;
+                // if (+d.Year > 2015) r = r * 0.9;
+                // if (+d.Year >= 2018) r = r * 0.88;
+                // const x = centerX + r * Math.cos(s.theta);
+                // const y = centerY + r * Math.sin(s.theta);
+
+                // ===== 记录下来，后续全部用 points =====
+                points.push({x, y, d});
+            }
+
+            svg.selectAll("circle")
+            .data(points)
+            .join("circle")
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y)
+            .attr("r", d => rScale(d.d.count) * 2.0)
+            .attr("fill", (d, i) => `url(#${getGradientId(i)})`)
+            .attr("filter", "url(#glow)");
+
+            // svg.append("path")
+            // .datum(points)
+            // .attr("fill", "none")
+            // .attr("stroke", "#aaa")
+            // .attr("stroke-width", 2)
+            // .attr("d", d3.line()
+            //     .x(d => d.x)
+            //     .y(d => d.y)
+            //     .curve(d3.curveCardinal)
+            // );
+
+
+
+         // 生成唯一渐变id
+            function getGradientId(i) {
+                return `radial-gradient-${i}`;
+            }
+
+            // 定义渐变
+            points.forEach((pt, i) => {
+                const grad = svg.append("radialGradient")
+                    .attr("id", getGradientId(i))
+                    .attr("cx", "50%").attr("cy", "50%").attr("r", "55%");
+                grad.append("stop")
+                    .attr("offset", "0%")
+                    .attr("stop-color", color(pt.d.hot_sum))
+                    .attr("stop-opacity", 1);
+                grad.append("stop")
+                    .attr("offset", "80%")
+                    .attr("stop-color", "#fff")
+                    .attr("stop-opacity", 0.1);
+                grad.append("stop")
+                    .attr("offset", "100%")
+                    .attr("stop-color", "#fff")
+                    // .attr("stop-color", color(pt.d.hot_sum))
+                    .attr("stop-opacity", 0);
+            });
+
+            // points.forEach((pt, i) => {
+            //     const beams = 50; // 光束数
+            //     const R = rScale(pt.d.count) * 1.1;
+            //     for (let j = 0; j < beams; j++) {
+            //         const angle = (2 * Math.PI / beams) * j;
+            //         svg.append("line")
+            //             .attr("x1", pt.x)
+            //             .attr("y1", pt.y)
+            //             .attr("x2", pt.x + Math.cos(angle) * R * 1.3)
+            //             .attr("y2", pt.y + Math.sin(angle) * R * 1.3)
+            //             .attr("stroke", color(pt.d.hot_sum))
+            //             .attr("stroke-width", 2)
+            //             .attr("stroke-opacity", 0.7)
+            //             .lower();
+            //     }
+            // });
+
+            const beams = 50;
+            const allBeams = [];
+            points.forEach((pt, i) => {
+                const R = rScale(pt.d.count) * 1.1;
+                for (let j = 0; j < beams; j++) {
+                    const angle = (2 * Math.PI / beams) * j;
+                    allBeams.push({
+                        x1: pt.x,
+                        y1: pt.y,
+                        x2: pt.x + Math.cos(angle) * R * 1.3,
+                        y2: pt.y + Math.sin(angle) * R * 1.3,
+                        color: color(pt.d.hot_sum),
+                        ptIndex: i
+                    });
+                }
+            });
+
+            svg.selectAll(".beam-line")
+                .data(allBeams)
+                .join("line")
+                .attr("class", "beam-line")
+                .attr("x1", d => d.x1)
+                .attr("y1", d => d.y1)
+                .attr("x2", d => d.x1)  // 起始时终点重合
+                .attr("y2", d => d.y1)
+                .attr("stroke", d => d.color)
+                .attr("stroke-width", 2)
+                .attr("stroke-opacity", 0.7)
+                .lower()
+                .transition()
+                .delay(d => d.ptIndex * 80)   // 跟随圆的 delay
+                .duration(900)
+                .ease(d3.easeCubicOut)
+                .attr("x2", d => d.x2)
+                .attr("y2", d => d.y2);
+
+
+                
+            // // 画圆点
+            // svg.selectAll("circle")
+            //     .data(points)
+            //     .join("circle")
+            //     .attr("cx", d => d.x)
+            //     .attr("cy", d => d.y)
+            //     // .attr("r", d => rScale(d.d.count))
+            //     // .attr("fill", d => color(d.d.hot_sum))
+            //     .attr("r", d => rScale(d.d.count) * 2.0)
+            //     .attr("fill", (d, i) => `url(#${getGradientId(i)})`)
+            //     .attr("filter", "url(#glow)");
+            //     // .attr("stroke", "#333")
+            //     // .attr("stroke-width", 1.2);
+
+            svg.selectAll("circle")
+                .data(points)
+                .join("circle")
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y)
+                .attr("r", 0) // 起始半径为 0
+                .attr("fill", (d, i) => `url(#${getGradientId(i)})`)
+                .attr("filter", "url(#glow)")
+                .transition()
+                .delay((d, i) => i * 80)       // 依次出现，i 越大延迟越长
+                .duration(900)                 // 每个圆的动画时长
+                .ease(d3.easeCubicOut)         // 动画缓动
+                .attr("r", d => rScale(d.d.count) * 2.0); // 目标半径
+
+        
+            // 年份标签
+            svg.selectAll("text.year")
+                .data(points)
+                .join("text")
+                .attr("class", "year")
+                // .attr("x", d => d.x)
+                // .attr("y", d => d.y - rScale(d.d.count) - 6)
+                .attr("x", d => {
+                    // 圆心到点的方向向量
+                    const dx = d.x - centerX;
+                    const dy = d.y - centerY;
+                    const len = Math.sqrt(dx*dx + dy*dy);
+                    // 延长距离：圆半径+额外距离
+                    const r = rScale(d.d.count) * 2.5;
+                    const extra = 13; // 你可以调大让标签更远
+                    return centerX + (dx / len) * (len + r + extra);
+                })
+                .attr("y", d => {
+                    const dx = d.x - centerX;
+                    const dy = d.y - centerY;
+                    const len = Math.sqrt(dx*dx + dy*dy);
+                    const r = rScale(d.d.count) * 2.5;
+                    const extra = .1;
+                    return centerY + (dy / len) * (len + r + extra);
+                })
+                .attr("text-anchor", "middle")
+                .attr("font-family", "Cormorant Garamond, vietnamese")
+                .attr("font-size", "16px")
+                .attr("fill", "#273046")
+                .text(d => d.d.Year);
+        
+            // 可选：tooltip
+            const tooltip = d3.select("body").append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
+        
+            svg.selectAll("circle")
+                .on("mouseover", (event, d) => {
+                    tooltip.transition().duration(200).style("opacity", .9);
+                    tooltip.html(`
+                        <div>
+                            <div style="font-weight:bold;font-size:22px;letter-spacing:0.5px;margin-bottom:4px;">
+                                📅${d.d.Year}
+                            </div>
+                            <div>数量：
+                                <span style="font-weight:bold">${d.d.count}</span>
+                            </div>
+                            <div>热度：
+                                <span style="font-weight:bold">${d.d.hot_sum}</span>
+                            </div>
+                        </div>
+                    `)
+
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 20) + "px");
+                })
+                .on("mousemove", (event) => {
+                    tooltip.style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 20) + "px");
+                })
+                .on("mouseout", () => {
+                    tooltip.transition().duration(200).style("opacity", 0);
+                });
+        });
+    </script>
+</body  >
+</html>

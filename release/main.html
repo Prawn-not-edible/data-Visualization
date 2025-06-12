@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>哈利波特同人作品可视化</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #eaeaf7;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+        }
+        .sidebar {
+            width: 300px;
+            height: 100vh;
+            background: #31294b;
+            color: #beb5e5;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 28px 0 0 0;
+            box-shadow: 2px 0 12px rgba(30,20,60,0.07);
+        }
+        .sidebar .logo {
+            width: 100%;
+            padding: 0 28px 28px 28px;
+            font-size: 1.3em;
+            letter-spacing: 0.1em;
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav {
+            width: 100%;
+            flex: 1;
+        }
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0 0 0 0;
+        }
+        .nav-item {
+            width: 100%;
+        }
+        .nav-link {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 13px 28px;
+            color: #beb5e5;
+            font-size: 1.05em;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            background: none;
+            outline: none;
+            border-radius: 0 24px 24px 0;
+            transition: 
+                background 0.18s,
+                color 0.18s,
+                border-left 0.16s;
+            cursor: pointer;
+        }
+        .nav-link.selected, .nav-link:hover {
+            color: #fff;
+            background: #473a73;
+            border-left: 3px solid #a58bff;
+        }
+        .nav-link .iconify {
+            font-size: 1.0em;
+        }
+        .sidebar-bottom {
+            width: 100%;
+            padding: 24px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 1px solid #453e63;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            width: 80%;
+            margin: 20px 0 8px 0;
+        }
+        .profile img {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+        }
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.96em;
+        }
+        .profile-info span {
+            color: #fff;
+            font-weight: 500;
+        }
+        .profile-info small {
+            color: #beb5e5;
+            font-size: 0.90em;
+        }
+        .toggle-mode {
+            margin: 0 0 16px 0;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #beb5e5;
+            font-size: 1em;
+        }
+        .toggle-btn {
+            width: 36px;
+            height: 20px;
+            background: #7266c8;
+            border-radius: 10px;
+            position: relative;
+            transition: background 0.2s;
+        }
+        .toggle-btn::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border-radius: 50%;
+            left: 2px;
+            top: 2px;
+            transition: left 0.2s;
+        }
+        .toggle-btn.active {
+            background: #beb5e5;
+        }
+        .toggle-btn.active::before {
+            left: 18px;
+        }
+        .content {
+            flex: 1;
+            height: 100vh;
+            display: flex;
+            background: #f6f8fa;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 32px 0 0 0;
+        }
+        iframe {
+            width: 1000px;
+            height: 90vh;
+            border: none;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px 2px rgba(60,40,90,0.08);
+        }
+    </style>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <span class="iconify" data-icon="mingcute:magic-hat-fill"></span> Harry Potter
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link selected" href="#" onclick="switchChart('index_ex.html', this)"><span class="iconify" data-icon="eva:people-outline"></span>同人宇宙角色共现网络图</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="switchChart('index2_ex.html', this)"><span class="iconify" data-icon="mdi:fire"></span>时间轴热度动画</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick="switchChart('index3_ex.html', this)"><span class="iconify" data-icon="material-symbols:bookmark-heart"></span>体裁-角色桑基图</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-bottom">
+           
+        </div>
+    </div>
+    <div class="content">
+        <iframe id="chartFrame" src="index_ex.html"></iframe>
+    </div>
+    <script>
+        // 侧边栏高亮逻辑
+        function switchChart(filename, el) {
+            document.getElementById('chartFrame').src = filename;
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+        // Light mode 演示（仅视觉切换，无功能）
+        document.getElementById('toggleBtn').onclick = function () {
+            this.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

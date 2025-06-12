@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HP Fanfiction Sankey</title>
+    <style>
+        .node rect {
+            fill-opacity: 0.9;
+            shape-rendering: crispEdges;
+        }
+        .node text {
+            font-size: 12px;
+            font-family: sans-serif;
+        }
+        .link {
+            fill: none;
+            stroke-opacity: 0.2;
+        }
+        .link:hover {
+            stroke-opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+      
+        
+<script src="js/d3.v7.min.js"></script>
+<script src="js/d3-sankey.min.js"></script>
+
+<script>
+  const margin = { top: 10, right: 10, bottom: 10, left: 10 };
+  const width  = 1200 - margin.left - margin.right;
+  const height = 800 - margin.top - margin.bottom;
+
+  const svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")        
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+  d3.csv("data/genre_characters_hot_v2.csv").then(function(rawData) {
+    // 过滤掉注释行或空行
+    const data = rawData.filter(d => d.genre && !d.genre.startsWith("//"));
+
+      // 1. 统计每个 genre 的总 hot
+    const genreHotMap = {};
+    data.forEach(d => {
+        let genre = String(d.genre).trim();
+        if (genre.charCodeAt(0) === 65279) genre = genre.slice(1).trim();
+        const hot = +d.hot;
+        if (!genreHotMap[genre]) genreHotMap[genre] = 0;
+        genreHotMap[genre] += hot;
+    });
+
+    // 2. 排序并取前20名
+    const topGenres = Object.entries(genreHotMap)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 20)
+        .map(d => d[0]);
+
+    // 3. 只保留前20名genre的数据
+    const filteredData = data.filter(d => {
+        let genre = String(d.genre).trim();
+        if (genre.charCodeAt(0) === 65279) genre = genre.slice(1).trim();
+        return topGenres.includes(genre);
+    });
+
+    // 统计每个 character 的总 hot
+    const characterHotMap = {};
+    filteredData.forEach(d => {
+        const character = String(d.characters).trim();
+        const hot = +d.hot;
+        if (!characterHotMap[character]) characterHotMap[character] = 0;
+        characterHotMap[character] += hot;
+    });
+
+    // 排序并取前40名
+    const topCharacters = Object.entries(characterHotMap)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 40)
+        .map(d => d[0]);
+
+    // 只保留前40名 character 的数据
+    const filteredData2 = filteredData.filter(d => {
+        const character = String(d.characters).trim();
+        return topCharacters.includes(character);
+    });    
+    // 定义热度等级
+    const hotLevelsThreshold = {
+      "Very High": 1000000,
+      "High":      100000,
+      "Medium":    10000,
+      "Low":       1000,
+      "Very Low":  0
+    };
+
+    // 用来存放各类节点
+    const genres      = new Set();  // 第一列
+    const hotLevels   = new Set();  // 第二列
+    const characters  = new Set();  // 第三列
+    // 我们拆分成两段链接
+    const links = [];
+    
+    filteredData2.forEach(d => {
+      if (!d.genre || !d.characters || !d.hot) return;
+      // 去除 BOM 和多余空格
+      let genre = String(d.genre).trim();
+      if (genre.charCodeAt(0) === 65279) {
+        genre = genre.slice(1).trim();
+      }
+      const character = String(d.characters).trim();
+      const hot = +d.hot;
+      if (hot <= 0) return;
+      
+      // 计算 hotLevel
+      let hotLevel;
+      if (hot > hotLevelsThreshold["Very High"]) hotLevel = "Very High";
+      else if (hot > hotLevelsThreshold["High"]) hotLevel = "High";
+      else if (hot > hotLevelsThreshold["Medium"]) hotLevel = "Medium";
+      else if (hot > hotLevelsThreshold["Low"]) hotLevel = "Low";
+      else hotLevel = "Very Low";
+      
+      // 收集节点
+      genres.add(genre);
+      hotLevels.add(hotLevel);
+      characters.add(character);
+      
+      // 构建两段链接，值为 hot（也可以考虑累计相同节点的值）
+      links.push({
+        source: genre,
+        target: hotLevel,
+        value: hot,
+        hotLevel: hotLevel
+      });
+      links.push({
+        source: hotLevel,
+        target: character,
+        value: hot,
+        hotLevel: hotLevel
+      });
+    });
+    
+    // 调试输出
+    console.log("Genres:", Array.from(genres));
+    console.log("Hot Levels:", Array.from(hotLevels));
+    console.log("Characters:", Array.from(characters));
+    
+    // 构建节点数组：三列节点
+    const nodes = Array.from(new Set([...genres, ...hotLevels, ...characters]))
+                   .map(id => ({ id }));
+    
+    console.log("All nodes:", nodes.map(d => d.id));
+    
+    // 设置 sankey 布局（注意指定 nodeId 用以匹配）
+    const sankey = d3.sankey()
+      .nodeId(d => d.id)
+      .nodeWidth(15)
+      .nodePadding(10)
+      .extent([[1, 1], [width - 1, height - 5]]);
+    
+    const graph = sankey({
+      nodes: nodes.map(d => Object.assign({}, d)),
+      links: links.map(d => Object.assign({}, d))
+    });
+    
+    const color = d3.scaleOrdinal()
+      .domain(["Very High", "High", "Medium", "Low", "Very Low"])
+    //   .range(["#ff0000", "#ff9900", "#ffff00", "#00ff00", "#0000ff"]);
+      .range(d3.schemeTableau10);
+
+    
+    svg.append("g")
+       .selectAll("path")
+       .data(graph.links)
+       .join("path")
+         .attr("d", d3.sankeyLinkHorizontal())
+         .attr("stroke", d => color(d.hotLevel))
+         .attr("stroke-width", d => Math.max(1, d.width))
+         .attr("class", "link")
+         .style("stroke-opacity", 0.2)
+        .append("title")
+         .text(d => `${d.source.id} → ${d.target.id}\nHot: ${d.value}`);
+    
+            // const node = svg.append("g
+    const node = svg.append("g")
+        .selectAll("g")
+        .data(graph.nodes)
+        .join("g");
+    // 定义 genre 颜色
+    const genreColor = d3.scaleOrdinal()
+    .domain(Array.from(genres))
+    .range(d3.schemeCategory10);
+    
+    node.append("rect")
+        .attr("x", d => d.x0)
+        .attr("y", d => d.y0)
+        .attr("height", d => d.y1 - d.y0)
+        .attr("width", d => d.x1 - d.x0)
+        // .attr("fill", "#69b3a2")
+        .attr("fill", d => genres.has(d.id) ? genreColor(d.id) : "#69b3a2")
+        .append("title")
+        .text(d => `${d.id}\nTotal Hot: ${d.value}`);
+
+    node.append("text")
+        .attr("x", d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
+        .attr("y", d => (d.y1 + d.y0) / 2)
+        .attr("dy", "0.35em")
+        .attr("text-anchor", d => d.x0 < width / 2 ? "start" : "end")
+        .text(d => d.id)
+        .style("font-size", "10px");
+
+    node.append("title")
+        .text(d => `${d.id}\n总热度: ${d.value}`);
+    });
+    </script>
+
+
+</body>
+</html>
